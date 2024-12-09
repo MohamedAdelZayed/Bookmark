@@ -1,0 +1,137 @@
+
+
+::selection{
+    background-color: #fec260;
+}
+
+.head1  , .Btn-sub{
+    border-bottom: 2px dotted black;
+}
+
+.head1 h1{
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+}
+
+.head1 h1::before {
+    position: absolute;
+    content: "";
+
+    width: 100%;
+    height: 20px;
+    background-color: #fec260;
+    left: 0;
+    bottom: 3px;
+    z-index: -1;
+
+    transition: all 0.4s;
+}
+
+.head1 h1:hover::before {
+
+    height: 60%;
+
+}
+
+.head2{
+    font-family: "Righteous", serif;
+    width: fit-content;
+    margin: auto;
+
+    background-image:linear-gradient(to right, #3ca55c, #9BAA4D);
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label{
+    font-weight: 700;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.form-control:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+#subBtn{
+    background-color: #d1512d; 
+}
+
+#subBtn , #updateBtn , #deleteAllBtn{
+
+    width: 300px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .Btn-sub{
+        flex-direction: column;
+    }
+
+    #subBtn , #updateBtn , #deleteAllBtn{
+
+        width: 100%;
+
+        padding: 10px;        
+
+    }   
+
+    .head2{
+        font-size: 23px;
+    }
+
+}
+
+.my-custom-title {
+    color: #4CAF50; 
+    font-size: 30px; 
+    font-style: italic;
+}
+
+.visit{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+
+.alert {
+    --bs-alert-padding-x: 10px;
+    --bs-alert-padding-y: 6px;
+}
+
+
+
+.alertBox{
+    background-color: #0007;
+    cursor: pointer;
+}
+
+.alertBox .msgBox{
+    width: 520px;
+    background-color: #FFFFFF;
+}
+
+.alertBox .msgBox .balls span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+
+.wewe .cancel i{
+    cursor: pointer;
+}
+
+

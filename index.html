@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body style="background-color: #F7ECDE;">
+
+    
+    <section class="position-relative mt-0">
+
+
+        <div class="container pt-3 pb-3">
+
+                <div class=" head1 pb-5">
+                <h1 class="text-center">Bookmarker</h1>
+                </div>
+
+
+                <div> 
+    
+                    <h2 class="text-center my-4 head2 "><i class="fa-solid fa-bookmark"></i>  Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i> </h2>
+    
+                    <div class="mb-3">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        <label for="webName" class="form-label"> Site Name</label>
+
+                        <input oninput="validationInputs( this , 'alertName')" type="text" class="form-control" id="webName" placeholder="Bookmark Name">
+
+                        <p id="alertName" class="alert alert-danger d-none"> Site Name Is Invalid </p>
+
+                    </div>
+    
+                    <div class="mb-3">
+                        <i class="fa-solid fa-link"></i>
+                        <label for="webUrl" class="form-label"> Site URL</label>
+
+                        <input oninput="validationInputs( this , 'alertUrl')" type="email" class="form-control" id="webUrl" placeholder="Website URL">
+
+                        <p id="alertUrl" class="alert alert-danger d-none"> Site URl Is Invalid </p>
+
+                      </div>
+    
+                    <div class="Btn-sub pb-3 my-4 d-flex justify-content-between align-items-center">
+                        <button id="subBtn" type="submit" class="btn btn-danger fw-bold  mb-3">Add Website</button>
+                        <button id="updateBtn" type="submit" class="btn btn-primary fw-bold  mb-2 d-none">Update</button>
+
+                        <button id="deleteAllBtn" type="submit" class="btn btn-secondary fw-bold  mb-2 d-none">Delete All (<span class="count"></span>)</button>
+                     
+                    </div>
+    
+                </div> 
+
+
+                <div class="alertBox d-none d-flex justify-content-center align-items-center p-4 position-absolute start-0 top-0 w-100 h-100 ">
+
+                    <div class="msgBox  p-4">
+            
+                        <div class="wewe d-flex justify-content-between align-items-center mb-3">
+
+                            <div class="balls">
+                                <span class="bg-danger"></span>
+                                <span class="bg-warning ms-1"></span>
+                                <span class="bg-success ms-1"></span>
+                            </div>
+
+                            <div class="cancel fs-3">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+
+                        </div>
+            
+                        <h4 class="mt-2 mb-3">Site Name or Url is not valid, Please follow the rules below :</h4>
+            
+                        <div class="rules ms-3">
+                            <div class="fs-5 text-secondary mb-2"> <i class="fa-regular fa-circle-right"></i> Site name must contain at least 3 characters </div>
+                            <div class="fs-5 text-secondary mb-2"> <i class="fa-regular fa-circle-right"></i> Site URL must be a valid one </div>
+                            <div class="fs-5 text-secondary mb-2"> <i class="fa-regular fa-circle-right"></i> You Can't Add The Same Url OR The Same Name </div>
+                        </div>
+            
+                    </div>
+            
+            
+                </div>
+
+            
+                <div class="mt-3">
+
+                            <input id="search" type="search" class=" form-control w-75 m-auto mb-5" placeholder="Search By Website Name...">
+            
+                            <table class="table text-center align-middle">
+                
+                                <thead>
+                            
+                                    <tr>
+                                    <th scope="col">Index</th>
+                                    <th scope="col">Website Name</th>
+                                    <th scope="col">Visit</th>
+                                    <th scope="col">Update</th>
+                                    <th scope="col">Delete</th>
+                                  </tr>
+                            
+                                </thead>
+                                
+                                <tbody id="webData">
+                                  
+                                </tbody>
+                             
+                            </table>
+
+                </div>
+                            
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
